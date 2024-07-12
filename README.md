@@ -12,7 +12,7 @@
 
 ### Пояснювальна записка
 
-пыд час першого запуску проекту буде виконано команду composer install --optimize-autoloader. Тож проект буде доступний лише після завершення команди. 
+Під час першого запуску проекту буде виконано команду composer install --optimize-autoloader. Тож проект буде доступний лише після завершення команди. 
 
 Проект призначений для збереження температури за вказаним в енв файлі містом. Щогодини запускається крон задача яка виконує запит до вказаного в конфігуріції провайдера погоди
 і зберігає отримані данні в базі даних. В подальшому отримати збережені дані можна через АПІ ендпоінт який поверне колекцію обєктів 
@@ -52,6 +52,11 @@
 ### 1. Clone the repo
 ```bash
 git clone git@github.com:mtereschenko/weather_app.git
+```
+### 2. Follow the directory with the project and execute this command
+```bash
+> cd environment &&  cp .env.example .env && make build && make start && make shell
+> php artisan migrate
 ```
 
 ## Usage
